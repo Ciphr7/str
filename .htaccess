@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^bzebee.com$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.strdashboard.com$
+RewriteCond %{REQUEST_URI} !dist/
+RewriteRule (.*) /build/$1 [L]
+RewriteRule ^ /dist/index.html [L]
