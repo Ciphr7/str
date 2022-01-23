@@ -2,5 +2,5 @@ RewriteEngine on
 RewriteCond %{HTTP_HOST} ^strdashboard.com$ [NC,OR]
 RewriteCond %{HTTP_HOST} ^www.strdashboard.com$
 RewriteCond %{REQUEST_URI} !dist/
-RewriteRule (.*) /build/$1 [L]
+RewriteRule (.*) /dist/$1 [L]
 RewriteRule ^ /dist/index.html [L]
